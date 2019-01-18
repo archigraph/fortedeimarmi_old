@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.2/17253
 // Filename: Forte1.ggsk
-// Generated Пт янв 18 09:41:59 2019
+// Generated Пт янв 18 10:02:59 2019
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_auto_hide_controller', 2, true);
@@ -1349,7 +1349,7 @@ function pano2vrSkin(player,base) {
 		el.ggDx=340.63;
 		el.ggDy=-878.19;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=false;
+		el.ggVisible=true;
 		el.className="ggskin ggskin_map ";
 		el.ggType='map';
 		hs ='';
@@ -1361,7 +1361,7 @@ function pano2vrSkin(player,base) {
 		hs+='overflow : hidden;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
-		hs+='visibility : hidden;';
+		hs+='visibility : inherit;';
 		hs+='width : 800%;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
@@ -1745,7 +1745,8 @@ function pano2vrSkin(player,base) {
 			me.updateSize(me.divSkin);
 		});
 		player.addListener('configloaded', function() {
-			me._map_1.ggMapNotLoaded = true;
+			me._map_1.ggInitMap(false);
+			me._map_1.ggInitMapMarkers(true);
 		});
 	};
 	this.hotspotProxyClick=function(id, url) {
