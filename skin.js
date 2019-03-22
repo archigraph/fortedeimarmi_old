@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.0.2/17253
 // Filename: Forte1.ggsk
-// Generated Чт мар 21 07:39:55 2019
+// Generated Пт мар 22 09:23:55 2019
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_auto_hide_controller', 2, true);
